@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Caches
+data/
+.cache/
+.pytest_cache/
+.numba_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Generated outputs - regenerate via scripts/
+results/
+
+# Hugging Face / Torch caches (in case they land here)
+huggingface/
+torch_cache/
+
+# IDE
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

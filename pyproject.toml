@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circuit-structure"
+version = "0.1.0"
+description = "Graph-structural signatures of deceptive vs honest model circuits"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Samanyu Bhowmik"}]
+keywords = ["interpretability", "ai-safety", "graph-theory", "treewidth", "sae"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "torch>=2.2,<3",
+    "transformer-lens>=2.0,<3",
+    "sae-lens>=4.0,<6",
+    "networkx==3.5.*",
+    "numpy>=1.26,<2.3",
+    "numba>=0.59",
+    "scipy>=1.13",
+    "scikit-learn>=1.4",
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "pyyaml>=6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"circuit_structure" = ["py.typed"]

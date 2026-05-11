@@ -1,0 +1,20 @@
+# Default experiment configuration.
+# Reproduces the Phase 1-3 demo on GPT-2 small + Joseph Bloom residual SAE @ layer 8.
+
+seed: 0
+model_name: gpt2
+layer_index: 8
+n_prompts_per_condition: 50
+
+sae:
+  release: gpt2-small-res-jb
+  sae_id: blocks.8.hook_resid_pre
+  device: cpu
+
+graph:
+  activation_threshold: 0.01
+  min_coactivation: 5
+  aggregate_positions: all     # all | last | mean
+
+conditions:
+  - honest_factual
